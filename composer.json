@@ -68,5 +68,11 @@
             "require": "4.4.*",
             "docker": false
         }
+    },
+    "require-dev": {
+        "symfony/debug-bundle": "4.4.*",
+        "symfony/maker-bundle": "^1.36",
+        "symfony/stopwatch": "4.4.*",
+        "symfony/web-profiler-bundle": "4.4.*"
     }
 }
