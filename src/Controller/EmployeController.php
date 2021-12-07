@@ -58,4 +58,31 @@ class EmployeController extends AbstractController
         );
     }
     
+    /**
+     * @Route (
+     *      path = "employe/{nom}",
+     *      name = "employe_redirection",
+     *      requirements = {"nom":"[A-Za-z]+"}
+     *      
+     * )
+     * @param string $nom
+     */
+    public function redirection(string $nom):Response {
+        $nom = "Bond";
+        $url->$this->generateUrl("employe_employe_voirnomB", array('nom'=>$nom));
+    }
+    
+    /**
+     * @Route (
+     *      path = "employe2/{nom}",
+     *      name = "employe2_redirection",
+     *      requirements = {"nom":"[A-Za-z]+"}
+     *      
+     * )
+     * @param string $nom
+     */
+    public function redirectionV2(string $nom):Response {
+        $nom = "Bond";
+        return $this->redirectToRoute("employe_employe_voirnomB", ['nom' => $nom,]);
+    }
 }
